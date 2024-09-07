@@ -15,6 +15,25 @@ pipenv install -e .
 pipenv run ...
 
 ## Files
+```
+cis6930fa24-assignment0
+|   COLLABORATORS.md
+|   main.py
+|   Pipfile
+|   Pipfile.lock
+|   README.md
+|   setup.cfg
+|   setup.py
+|   tree.txt
+|                 
++---docs
++---LICENSE
++---Resources
+|       data.json
+|       
+\---tests
+    |   test_main.py
+```
 
 ## Functions
 
@@ -28,4 +47,3 @@ pipenv run ...
 
 
 ## Bugs and Assumptions
-...
