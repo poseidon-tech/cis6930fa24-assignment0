@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 import main
 
 
-file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'resources', 'data.json'))
+file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Resources', 'data.json'))
 
 
 def test_non_empty_page():
