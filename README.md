@@ -42,8 +42,11 @@ or
 pipenv run pytest
 ```
 
-<!-- ## Example
-![video](video) -->
+## Example
+
+You can watch the demo video [here](https://uflorida-my.sharepoint.com/:v:/g/personal/yalamanchili_p_ufl_edu/EbRzIzYIIAhCtDMlKBn5Fa4BW1uuOEcg0UOxglwpL8LYjQ?e=osHv1F&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D).
+
+
 
 ## Folder Structure
 ```
