@@ -39,8 +39,11 @@ pipenv run python -m pytest -v
 or
 
 ```bash
-pipenv pytest
+pipenv run pytest
 ```
+
+<!-- ## Example
+![video](video) -->
 
 ## Folder Structure
 ```
@@ -70,7 +73,7 @@ cis6930fa24-assignment0
 - **setup.cfg** and **setup.py:** Used for setting up the Python environment.
 - **docs:** Contains documentation for the assignment.
 - **LICENSE:** Contains licensing information, including copyright, publishing, and usage rights.
-- **Resources:** Stores data files, including `data.json`, which contains data from the FBI API (page 1).
+- **Resources:** Stores data files, including `data.json`, which contains data from the FBI API (page 1) used for testing.
 - **tests:** Contains test files. `test_main.py` is used for testing the main Python file.
 
 ## `main.py`
@@ -96,6 +99,15 @@ This function formats the data and prints it in a thorn-separated field format.
 ### `test_non_empty_page()`
 Tests whether data is being fetched from the FBI API. It runs from Page 1 to Page 52, with 5-page increments each time. Page 52 is the last page from which data has been successfully retrieved as of 9/7/24.
 
+### `test_empty_page()`
+Tests whether the `downloadData` function returns an empty dataset when an invalid page number is provided.
+
+### `test_parse_file()`
+Tests whether the `parseFile` function correctly parses the JSON data from a valid file location.
+
+### `test_invalid_parse_file()`
+Tests whether the `parseFile` function handles errors gracefully when an invalid file location is provided .
+
 ### `test_title_extraction()`
 Checks whether titles are correctly extracted and verifies the data type received.
 
@@ -112,3 +124,5 @@ Checks whether the printed output is in correct format
 
 - Calling the API after page 52 returns empty items. Similarly, page 999 also returns empty items. Pages above 1000 result in a timeout error or CAPTCHA. It is suspected that there is rate limiting for API calls above page 999.
 - Data on FBI pages changes daily, so testing with an old downloaded file may result in errors.
+- Calling API too frequently results in temporary ban of client.
+- Users running this code may encounter errors if there are compatibility issues with the installed dependencies

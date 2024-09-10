@@ -14,10 +14,13 @@ def main(page=None, thefile=None):
         return reformat(data,page)
         
 def downloadData(page):
-    response = requests.get('https://api.fbi.gov/wanted/v1/list', params={'page': page})
-    if response.status_code == 200:
-        data = response.json()
-    return data
+    try:
+        response = requests.get('https://api.fbi.gov/wanted/v1/list', params={'page': page})
+        if response.status_code == 200:
+            data = response.json()
+            return data
+    except(Exception):
+        return None
           
 def parseFile(thefile): 
     try:      
@@ -26,6 +29,7 @@ def parseFile(thefile):
         return data
     except(Exception):
         print("File not found")
+        return None
         sys.exit(1)
 
 def reformat(data,page = None):
